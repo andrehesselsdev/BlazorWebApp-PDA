@@ -1,0 +1,54 @@
+﻿@page "/accommodations"
+@using BlazorApp.Services
+@using BlazorApp.Models
+@inject BookingService BookingService
+
+<h3>Accommodaties</h3>
+
+@if (accommodations == null)
+{
+    <p><em>Bezig met laden...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Naam accommodatie</th>
+                <th>Locatie</th>
+                <th>Prijs per nacht</th>
+                <th>Acties</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var accommodation in accommodations)
+            {
+                <tr>
+                    <td>
+                        @($"{accommodation.Name}")
+                    </td>
+                    <td>
+                        @($"{accommodation.Loc.City}, {accommodation.Loc.Country}")
+                    </td>
+                    <td>
+                        @($"{accommodation.Price.Value:C}")
+                    </td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="/accommodations/@accommodation.AccId">
+                            Details
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Accommodation> accommodations = new List<Accommodation>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        accommodations = await BookingService.GetAccommodationsAsync() ?? new List<Accommodation>();
+    }
+}
