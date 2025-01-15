@@ -1,0 +1,96 @@
+﻿@page "/customers"
+@using BlazorApp.Services
+@using BlazorApp.Models
+@inject CustomerService CustomerService
+
+<h3>Klantbeheer</h3>
+
+<hr />
+
+<h4>Klant toevoegen</h4>
+<EditForm Model="newCustomer" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <InputText id="firstName" class="form-control" @bind-Value="newCustomer.FirstName" />
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <InputText id="lastName" class="form-control" @bind-Value="newCustomer.LastName" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <InputText id="email" type="email" class="form-control" @bind-Value="newCustomer.Email" />
+    </div>
+
+    <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <InputText id="phoneNumber" class="form-control" @bind-Value="newCustomer.PhoneNumber" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Add Customer</button>
+</EditForm>
+
+<hr />
+
+@if (customers == null)
+{
+    <p><em>Bezig met laden...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Klant-ID</th>
+                <th>Voornaam</th>
+                <th>Achternaam</th>
+                <th>E-mailadres</th>
+                <th>Telefoonnummer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var customer in customers)
+            {
+                <tr>
+                    <td>
+                        @customer.CustomerId
+                    </td>
+                    <td>
+                        @customer.FirstName
+                    </td>
+                    <td>
+                        @customer.LastName
+                    </td>
+                    <td>
+                        @customer.Email
+                    </td>
+                    <td>
+                        @customer.PhoneNumber
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Customer> customers;
+    private Customer newCustomer = new Customer();
+
+    protected override async Task OnInitializedAsync()
+    {
+        customers = await CustomerService.GetCustomersAsync();
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        await CustomerService.AddCustomerAsync(newCustomer);
+        customers = await CustomerService.GetCustomersAsync();
+        newCustomer = new Customer();
+    }
+}

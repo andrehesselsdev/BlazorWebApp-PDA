@@ -200,4 +200,5 @@ C:\Users\andre\OneDrive - Chr. Hogeschool Ede\Vakken\1.1 PDA\Casussen\Eindopdrac
 C:\Users\andre\OneDrive - Chr. Hogeschool Ede\Vakken\1.1 PDA\Casussen\Eindopdracht\App\BlazorApp\obj\Debug\net9.0\BlazorApp.csproj.AssemblyReference.cache
 C:\Users\andre\OneDrive - Chr. Hogeschool Ede\Vakken\1.1 PDA\Casussen\Eindopdracht\App\BlazorApp\obj\Debug\net9.0\BlazorApp.csproj.Up2Date
 C:\Users\andre\OneDrive - Chr. Hogeschool Ede\Vakken\1.1 PDA\Casussen\Eindopdracht\App\BlazorApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\andre\OneDrive - Chr. Hogeschool Ede\Vakken\1.1 PDA\Casussen\Eindopdracht\App\BlazorApp\obj\Debug\net9.0\BlazorApp.sourcelink.json
 C:\Users\andre\OneDrive - Chr. Hogeschool Ede\Vakken\1.1 PDA\Casussen\Eindopdracht\App\BlazorApp\obj\Debug\net9.0\compressed\niqfivrdr6-lkq6ena9x1.gz
