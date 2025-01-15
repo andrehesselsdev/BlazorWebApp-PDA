@@ -1,7 +1,7 @@
 ﻿@page "/accommodations"
 @using BlazorApp.Services
 @using BlazorApp.Models
-@inject AccommodationService AccommodationService
+@inject BookingService BookingService
 
 <h3>Accommodaties</h3>
 
@@ -49,6 +49,6 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        accommodations = await AccommodationService.GetAccommodationsAsync() ?? new List<Accommodation>();
+        accommodations = await BookingService.GetAccommodationsAsync() ?? new List<Accommodation>();
     }
 }
