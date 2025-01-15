@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlazorApp.Services
 {
-    public class BookingService
+    public class AccommodationService
     {
         private readonly BookingAppContext _context;
-        public BookingService(BookingAppContext context)
+        public AccommodationService(BookingAppContext context)
         {
             _context = context;
         }
