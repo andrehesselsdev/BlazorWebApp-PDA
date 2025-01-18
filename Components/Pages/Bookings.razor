@@ -1,0 +1,179 @@
+﻿@page "/bookings"
+@using BlazorApp.Services
+@using BlazorApp.Models
+@inject BookingService BookingService
+
+<h3>Boekingen</h3>
+
+<h4>Nieuwe Boeking Toevoegen</h4>
+<EditForm Model="newBooking" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="accommodation">Accommodatie</label>
+        <InputSelect id="accommodation" class="form-control" @bind-Value="newBooking.AccId" @onchange="CalculateTotalPrice">
+            <option value="">-- Selecteer Accommodatie --</option>
+            @if (accommodations != null)
+            {
+                @foreach (var acc in accommodations)
+                {
+                    <option value="@acc.AccId">@($"{acc.Name} ({acc.Loc?.City}, {acc.Loc?.Country})")</option>
+                }
+            }
+            else
+            {
+                <option value="">Geen accommodaties beschikbaar</option>
+            }
+        </InputSelect>
+    </div>
+
+    <div class="form-group">
+        <label for="customer">Klant</label>
+        <InputSelect id="customer" class="form-control" @bind-Value="newBooking.CustomerId">
+            <option value="">-- Selecteer Klant --</option>
+            @if (customers != null)
+            {
+                @foreach (var cust in customers)
+                {
+                    <option value="@cust.CustomerId">@($"{cust.FirstName} {cust.LastName}")</option>
+                }
+            }
+            else
+            {
+                <option value="">Geen klanten beschikbaar</option>
+            }
+        </InputSelect>
+    </div>
+
+    <div class="form-group">
+        <label for="bookingDate">Boekingsdatum</label>
+        <InputDate id="bookingDate" class="form-control" @bind-Value="newBooking.BookingDate" />
+    </div>
+
+    <div class="form-group">
+        <label for="arrivalDate">Aankomstdatum</label>
+        <InputDate id="arrivalDate" class="form-control" @bind-Value="newBooking.ArrivalDate" @onchange="CalculateTotalPrice" />
+    </div>
+
+    <div class="form-group">
+        <label for="departureDate">Vertrekdatum</label>
+        <InputDate id="departureDate" class="form-control" @bind-Value="newBooking.DepartureDate" @onchange="CalculateTotalPrice" />
+    </div>
+
+    <div class="form-group">
+        <label for="numberOfGuests">Aantal Gasten</label>
+        <InputNumber id="numberOfGuests" class="form-control" @bind-Value="newBooking.NumberOfGuests" @onchange="CalculateTotalPrice" />
+    </div>
+
+    <div class="form-group">
+        <label>Totale Prijs</label>
+        <input type="text" class="form-control" value="@FormattedTotalPrice" readonly />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Boeking Toevoegen</button>
+</EditForm>
+
+<hr />
+
+@if (bookings == null)
+{
+    <p><em>Bezig met laden...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Boeking-ID</th>
+                <th>Accommodatie</th>
+                <th>Klant</th>
+                <th>Boekingsdatum</th>
+                <th>Aankomstdatum</th>
+                <th>Vertrekdatum</th>
+                <th>Aantal Gasten</th>
+                <th>Totale Prijs</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in bookings)
+            {
+                <tr>
+                    <td>@booking.BookingId</td>
+                    <td>@($"{booking.Acc?.Name} ({booking.Acc?.Loc?.City}, {booking.Acc?.Loc?.Country})")</td>
+                    <td>@($"{booking.Customer?.FirstName} {booking.Customer?.LastName}")</td>
+
+                    <td>@booking.BookingDate?.ToString("dd-MM-yyyy")</td>
+                    <td>@booking.ArrivalDate?.ToString("dd-MM-yyyy")</td>
+                    <td>@booking.DepartureDate?.ToString("dd-MM-yyyy")</td>
+                    <td>@booking.NumberOfGuests</td>
+                    <td>@(booking.TotalPrice.HasValue ? booking.TotalPrice.Value.ToString("C") : "Onbekend")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Booking> bookings;
+    private List<Accommodation> accommodations;
+    private List<Customer> customers;
+
+    private Booking newBooking = new Booking();
+
+    private decimal? calculatedTotalPrice;
+    private string FormattedTotalPrice => calculatedTotalPrice.HasValue ? calculatedTotalPrice.Value.ToString("C") : "Onbekend";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadDataAsync();
+    }
+
+    private async Task LoadDataAsync()
+    {
+        bookings = await BookingService.GetBookingsAsync();
+        accommodations = await BookingService.GetAccommodationsAsync();
+        customers = await BookingService.GetCustomersAsync();
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        CalculateTotalPrice(null);
+
+        if (calculatedTotalPrice == null)
+        {
+            return;
+        }
+
+        newBooking.TotalPrice = calculatedTotalPrice;
+
+        await BookingService.AddBookingAsync(newBooking);
+        await LoadDataAsync();
+        newBooking = new Booking();
+        calculatedTotalPrice = null;
+    }
+
+    private void CalculateTotalPrice(ChangeEventArgs e)
+    {
+        if (newBooking.ArrivalDate.HasValue && newBooking.DepartureDate.HasValue)
+        {
+            var arrivalDateTime = newBooking.ArrivalDate.Value.ToDateTime(TimeOnly.MinValue);
+            var departureDateTime = newBooking.DepartureDate.Value.ToDateTime(TimeOnly.MinValue);
+            var nights = (departureDateTime - arrivalDateTime).Days;
+            nights = nights > 0 ? nights : 0;
+
+            var accommodation = accommodations?.FirstOrDefault(a => a.AccId == newBooking.AccId);
+            var pricePerNight = accommodation?.Price ?? 0;
+
+            var guests = newBooking.NumberOfGuests ?? 0;
+
+            calculatedTotalPrice = guests * nights * pricePerNight;
+        }
+        else
+        {
+            calculatedTotalPrice = null;
+        }
+
+        StateHasChanged();
+    }
+}

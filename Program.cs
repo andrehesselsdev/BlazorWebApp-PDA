@@ -17,8 +17,9 @@ namespace BlazorApp
             builder.Services.AddDbContext<BookingAppContext>(options =>
                 options.UseSqlServer("Server=HP-ANDRÉ;Database=booking-app;Trusted_Connection=True;TrustServerCertificate=True;"));
 
-            builder.Services.AddScoped<BookingService>();
+            builder.Services.AddScoped<AccommodationService>();
             builder.Services.AddScoped<CustomerService>();
+            builder.Services.AddScoped<BookingService>();
 
             var app = builder.Build();
 
