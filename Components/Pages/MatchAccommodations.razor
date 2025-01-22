@@ -60,7 +60,6 @@ else
                             <th>Locatie</th>
                             <th>Prijs per Nacht (€)</th>
                             <th>Beschrijving</th>
-                            <th>Afbeelding</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -71,16 +70,6 @@ else
                                 <td>@($"{acc.Loc?.City}, {acc.Loc?.Province}, {acc.Loc?.Country}")</td>
                                 <td>@acc.Price?.ToString("F2")</td>
                                 <td>@acc.Description</td>
-                                <td>
-                                    @if (!string.IsNullOrEmpty(acc.ImageUrl))
-                                    {
-                                        <img src="@acc.ImageUrl" alt="@acc.Name" class="img-thumbnail" style="width:100px;height:auto;" />
-                                    }
-                                    else
-                                    {
-                                        <span>Onbekend</span>
-                                    }
-                                </td>
                             </tr>
                         }
                     </tbody>
