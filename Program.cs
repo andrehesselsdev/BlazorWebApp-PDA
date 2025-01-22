@@ -20,6 +20,7 @@ namespace BlazorApp
             builder.Services.AddScoped<AccommodationService>();
             builder.Services.AddScoped<CustomerService>();
             builder.Services.AddScoped<BookingService>();
+            builder.Services.AddScoped<MatchService>();
 
             var app = builder.Build();
 

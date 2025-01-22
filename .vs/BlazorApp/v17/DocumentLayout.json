@@ -3,36 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\pages\\bookings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\pages\\bookings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\pages\\matchaccommodations.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\pages\\matchaccommodations.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\pages\\customers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\pages\\customers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\pages\\bookings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\pages\\bookings.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\pages\\accommodationlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\pages\\accommodationlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\pages\\accommodationdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\pages\\accommodationdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\pages\\accommodationlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\pages\\accommodationlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:services\\matchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|c:\\users\\andre\\onedrive - chr. hogeschool ede\\vakken\\1.1 pda\\casussen\\eindopdracht\\app\\blazorapp\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{810E6864-EA0F-412E-9C5D-01EA013A8A96}|BlazorApp.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,61 +50,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccommodationDetails.razor",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\AccommodationDetails.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\AccommodationDetails.razor",
-              "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\AccommodationDetails.razor",
-              "RelativeToolTip": "Components\\Pages\\AccommodationDetails.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-17T07:42:39.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bookings.razor",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\Bookings.razor",
-              "RelativeDocumentMoniker": "Components\\Pages\\Bookings.razor",
-              "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\Bookings.razor",
-              "RelativeToolTip": "Components\\Pages\\Bookings.razor",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAUwHwAAAB+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T22:31:00.881Z",
+              "DocumentIndex": 7,
+              "Title": "MatchService.cs",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Services\\MatchService.cs",
+              "RelativeDocumentMoniker": "Services\\MatchService.cs",
+              "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Services\\MatchService.cs",
+              "RelativeToolTip": "Services\\MatchService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T21:33:19.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAQwB4AAAA0AAAAAAAAAA==",
+              "Title": "MatchAccommodations.razor",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\MatchAccommodations.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\MatchAccommodations.razor",
+              "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\MatchAccommodations.razor",
+              "RelativeToolTip": "Components\\Pages\\MatchAccommodations.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T20:39:11.486Z",
+              "WhenOpened": "2025-01-22T21:08:04.164Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T20:33:38.149Z"
+              "WhenOpened": "2025-01-15T20:33:38.149Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Customers.razor",
               "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\Customers.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Customers.razor",
@@ -109,7 +106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "AccommodationList.razor",
               "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\AccommodationList.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\AccommodationList.razor",
@@ -117,11 +114,12 @@
               "RelativeToolTip": "Components\\Pages\\AccommodationList.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T19:10:50.187Z"
+              "WhenOpened": "2025-01-15T19:10:50.187Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "Services\\CustomerService.cs",
@@ -129,19 +127,59 @@
               "RelativeToolTip": "Services\\CustomerService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T20:23:54.323Z"
+              "WhenOpened": "2025-01-15T20:23:54.323Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "BookingService.cs",
               "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Services\\BookingService.cs",
               "RelativeDocumentMoniker": "Services\\BookingService.cs",
               "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Services\\BookingService.cs",
               "RelativeToolTip": "Services\\BookingService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAwwC0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAcwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T20:30:56.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccommodationDetails.razor",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\AccommodationDetails.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\AccommodationDetails.razor",
+              "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\AccommodationDetails.razor",
+              "RelativeToolTip": "Components\\Pages\\AccommodationDetails.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-17T07:42:39.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Bookings.razor",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\Bookings.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Bookings.razor",
+              "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Pages\\Bookings.razor",
+              "RelativeToolTip": "Components\\Pages\\Bookings.razor",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAUwHwAAAB+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T22:31:00.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\andre\\OneDrive - Chr. Hogeschool Ede\\Vakken\\1.1 PDA\\Casussen\\Eindopdracht\\App\\BlazorApp\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-15T20:39:11.486Z",
               "EditorCaption": ""
             }
           ]

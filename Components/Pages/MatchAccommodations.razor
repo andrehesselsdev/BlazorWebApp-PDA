@@ -1,0 +1,157 @@
+﻿@page "/match-accommodations"
+@using BlazorApp.Services
+@using BlazorApp.Models
+@using System.ComponentModel.DataAnnotations
+@inject MatchService MatchService
+@inject IJSRuntime JSRuntime
+
+<h3>Match Accommodaties op Basis van Voorkeuren</h3>
+
+@if (isLoading)
+{
+    <p><em>Bezig met laden...</em></p>
+}
+else
+{
+    <EditForm Model="searchCriteria" OnValidSubmit="SearchAccommodations">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group mb-3">
+            <label for="propertySet">Selecteer Wens</label>
+            <InputSelect id="propertySet" class="form-control" @bind-Value="searchCriteria.SelectedPropertySetId" required>
+                <option value="">-- Kies een Wens --</option>
+                @if (propertySets != null)
+                {
+                    @foreach (var ps in propertySets)
+                    {
+                        <option value="@ps.PropId">@ps.Name</option>
+                    }
+                }
+            </InputSelect>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="arrivalDate">Aankomstdatum</label>
+            <InputDate id="arrivalDate" class="form-control" @bind-Value="searchCriteria.ArrivalDate" required />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="departureDate">Vertrekdatum</label>
+            <InputDate id="departureDate" class="form-control" @bind-Value="searchCriteria.DepartureDate" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Zoek Beschikbare Accommodaties</button>
+    </EditForm>
+
+    @if (searchPerformed)
+    {
+        <hr />
+
+        @if (matchedAccommodations != null)
+        {
+            <h4>Beschikbare Accommodaties</h4>
+            @if (matchedAccommodations.Any())
+            {
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Naam</th>
+                            <th>Locatie</th>
+                            <th>Prijs per Nacht (€)</th>
+                            <th>Beschrijving</th>
+                            <th>Afbeelding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var acc in matchedAccommodations)
+                        {
+                            <tr>
+                                <td>@acc.Name</td>
+                                <td>@($"{acc.Loc?.City}, {acc.Loc?.Province}, {acc.Loc?.Country}")</td>
+                                <td>@acc.Price?.ToString("F2")</td>
+                                <td>@acc.Description</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(acc.ImageUrl))
+                                    {
+                                        <img src="@acc.ImageUrl" alt="@acc.Name" class="img-thumbnail" style="width:100px;height:auto;" />
+                                    }
+                                    else
+                                    {
+                                        <span>Onbekend</span>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>Er zijn geen accommodaties beschikbaar die voldoen aan de geselecteerde wensen en datums.</p>
+            }
+        }
+        else
+        {
+            <p>Er is een fout opgetreden bij het ophalen van de accommodaties.</p>
+        }
+    }
+}
+
+@code {
+    private bool isLoading = true;
+    private bool searchPerformed = false;
+    private List<PropertySet> propertySets;
+    private List<Accommodation> matchedAccommodations;
+    private SearchCriteria searchCriteria = new SearchCriteria();
+
+    protected override async Task OnInitializedAsync()
+    {
+        isLoading = true;
+        try
+        {
+            propertySets = await MatchService.GetPropertySetsAsync();
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Fout bij het laden van wensen: {ex.Message}");
+        }
+        isLoading = false;
+    }
+
+    private async Task SearchAccommodations()
+    {
+        if (searchCriteria.ArrivalDate >= searchCriteria.DepartureDate)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", "Aankomstdatum moet vóór vertrekdatum liggen.");
+            return;
+        }
+
+        isLoading = true;
+        try
+        {
+            matchedAccommodations = await MatchService.GetAvailableAccommodationsAsync(
+                searchCriteria.SelectedPropertySetId.Value,
+                searchCriteria.ArrivalDate.Value,
+                searchCriteria.DepartureDate.Value);
+        }
+        catch (Exception ex)
+        {
+            await JSRuntime.InvokeVoidAsync("alert", $"Fout bij het zoeken van accommodaties: {ex.Message}");
+        }
+        isLoading = false;
+        searchPerformed = true;
+    }
+
+    public class SearchCriteria
+    {
+        [Required(ErrorMessage = "Selecteer een wens.")]
+        public int? SelectedPropertySetId { get; set; }
+
+        [Required(ErrorMessage = "Selecteer een aankomstdatum.")]
+        public DateTime? ArrivalDate { get; set; }
+
+        [Required(ErrorMessage = "Selecteer een vertrekdatum.")]
+        public DateTime? DepartureDate { get; set; }
+    }
+}

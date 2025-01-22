@@ -13,6 +13,8 @@ namespace BlazorApp.Services
             _context = context;
         }
 
+
+
         public async Task<List<Booking>> GetBookingsAsync()
         {
             return await _context.Bookings
